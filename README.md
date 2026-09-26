@@ -2,7 +2,7 @@
 
 Standalone profile site for Dr. Nasir Salar (Orthopedic & Spine Surgeon, Sarkhej-Makarba, Ahmedabad), built with Next.js 14 (App Router) and Tailwind CSS. Bilingual (English / Gujarati).
 
-Hosted at [drsalarorthospine.com](https://drsalarorthospine.com).
+Hosted at [drsalarspine.com](https://drsalarspine.com).
 
 ## Development
 

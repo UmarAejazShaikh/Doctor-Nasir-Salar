@@ -4,7 +4,7 @@ export default function JsonLd() {
   const schema = {
     "@context": "https://schema.org",
     "@type": "Physician",
-    "@id": "https://drsalarorthospine.com/#physician",
+    "@id": "https://drsalarspine.com/#physician",
     name: "Dr. Nasir Salar",
     jobTitle: "Orthopedic & Spine Surgeon",
     description:

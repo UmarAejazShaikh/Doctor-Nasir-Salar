@@ -20,7 +20,7 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://drsalarorthospine.com"),
+  metadataBase: new URL("https://drsalarspine.com"),
   title: {
     default: "MIS & Endoscopic Spine Surgery in Ahmedabad | Dr. Nasir Salar",
     template: "%s | Dr. Nasir Salar",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "profile",
     locale: "en_IN",
-    url: "https://drsalarorthospine.com",
+    url: "https://drsalarspine.com",
     title: "MIS & Endoscopic Spine Surgery in Ahmedabad | Dr. Nasir Salar",
     description:
       "Learn about Dr. Nasir Salar's orthopedic and spine profile, including MIS Spine Surgery and Endoscopic Spine Surgery in Ahmedabad.",

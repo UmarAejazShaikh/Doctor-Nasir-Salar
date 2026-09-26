@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://drsalarorthospine.com/sitemap.xml",
+    sitemap: "https://drsalarspine.com/sitemap.xml",
   };
 }
