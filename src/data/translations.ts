@@ -92,10 +92,10 @@ export const translations = {
       whyUs4Desc: "Conveniently located on Sarkhej Roza Road & Makarba with home sample collection service and consultation appointments."
     },
     ortho: {
-      badge: "Fellowship-Trained Spine & Orthopedic Surgeon",
+      badge: "Fellowship-Trained MIS & Endoscopic Spine Surgeon",
       name: "Dr. Nasir Salar",
       degrees: "M.B.B.S, M.S. Orthopedic (B.J. Medical College & Civil Hospital, Ahmedabad)",
-      fellowshipText: "Fellowship in Spine Surgery under Dr. Rohit Thaker (Ortho Plus Hospital)",
+      fellowshipText: "Fellowship in MIS & Endoscopic Spine Surgery under Dr. Rohit Thaker (Spine 360 Hospital, Ahmedabad)",
       tagline: "Advanced Spine Surgery, Minimally Invasive (MIS) & Endoscopic Precision for Pain-Free Movement.",
       aboutTitle: "About Dr. Nasir Salar",
       aboutP1: "Dr. Nasir Salar is an Orthopedic Surgeon with specialized fellowship training in Spine Surgery. Having completed his MBBS and Master of Surgery (MS) in Orthopedics from B.J. Medical College & Civil Hospital, Ahmedabad, he has extensive hands-on experience in musculoskeletal disorders, acute trauma, and degenerative spinal conditions.",
@@ -118,9 +118,9 @@ export const translations = {
           inst: "Civil Hospital, Ahmedabad & GMERS Medical College, Vadnagar (Complex fracture fixations, TLIF, discectomy & joint replacement)"
         },
         {
-          year: "April 2026 – Present",
-          title: "Fellowship in Spine Surgery",
-          inst: "Ortho Plus Hospital, Ahmedabad under Dr. Rohit Thaker (Super-specialized training in endoscopic & MIS spine surgery)"
+          year: "",
+          title: "Fellowship in MIS & Endoscopic Spine Surgery",
+          inst: "Trained under Dr. Rohit Thaker at Spine 360 Hospital, Ahmedabad (Super-specialized training in endoscopic & MIS spine surgery)"
         }
       ],
       coreFocusTitle: "Primary Clinical Focus: Advanced Spine Surgery",
@@ -175,7 +175,7 @@ export const translations = {
       ],
       consultCardTitle: "Consultation & Clinic Information",
       addressLabel: "Clinic Address:",
-      addressVal: "B 401, Sunflower Residency, Sarkhej, Ahmedabad, Gujarat",
+      addressVal: "Sarkhej-Juhapura, Ahmedabad, Gujarat",
       phoneLabel: "Call / WhatsApp:",
       phoneVal: "+91 85119 54797",
       emailLabel: "Official Email:",
@@ -890,10 +890,10 @@ export const translations = {
       whyUs4Desc: "સરખેજ રોઝા રોડ પર આવેલું સેન્ટર, સાથે જ સેમ્પલ કલેક્શનની વ્યવસ્થા ઉપલબ્ધ છે."
     },
     ortho: {
-      badge: "ફેલોશિપ-ટ્રેઇન્ડ સ્પાઇન અને ઓર્થોપેડિક સર્જન",
+      badge: "ફેલોશિપ-ટ્રેઇન્ડ MIS અને એન્ડોસ્કોપિક સ્પાઇન સર્જન",
       name: "ડો. નાસિર સાલાર",
       degrees: "M.B.B.S, M.S. ઓર્થોપેડિક (બી. જે. મેડિકલ કોલેજ & સિવિલ હોસ્પિટલ, અમદાવાદ)",
-      fellowshipText: "સ્પાઇન સર્જરી ફેલોશિપ - ડો. રોહિત ઠાકરના માર્ગદર્શન હેઠળ (ઓર્થો પ્લસ હોસ્પિટલ)",
+      fellowshipText: "MIS અને એન્ડોસ્કોપિક સ્પાઇન સર્જરી ફેલોશિપ - ડો. રોહિત ઠાકરના માર્ગદર્શન હેઠળ (સ્પાઇન 360 હોસ્પિટલ, અમદાવાદ)",
       tagline: "મણકાની અદ્યતન એન્ડોસ્કોપિક અને મિનિમલી ઇન્વેસિવ (MIS) સારવાર - ઓછામાં ઓછા દર્દ સાથે ઝડપી રિકવરી.",
       aboutTitle: "ડો. નાસિર સાલાર વિશે",
       aboutP1: "ડો. નાસિર સાલાર એક કુશળ ઓર્થોપેડિક સર્જન છે, જેમણે મણકા અને કરોડરજ્જુની સર્જરી (Spine Surgery) માં વિશિષ્ટ ફેલોશિપ તાલીમ મેળવેલી છે. તેમણે બી.જે. મેડિકલ કોલેજ અને સિવિલ હોસ્પિટલ અમદાવાદ ખાતેથી એમ.બી.બી.એસ અને એમ.એસ (ઓર્થોપેડિક્સ) નો અભ્યાસ પૂર્ણ કર્યો છે.",
@@ -916,9 +916,9 @@ export const translations = {
           inst: "સિવિલ હોસ્પિટલ અમદાવાદ & GMERS મેડિકલ કોલેજ, વડનગર (જટિલ ફ્રેક્ચર, TLIF, ડિસ્કેક્ટોમી અને જોઈન્ટ રિપ્લેસમેન્ટ)"
         },
         {
-          year: "એપ્રિલ ૨૦૨૬ – ચાલુ",
-          title: "ફેલોશિપ ઇન સ્પાઇન સર્જરી",
-          inst: "ઓર્થો પ્લસ હોસ્પિટલ, અમદાવાદ - ડો. રોહિત ઠાકરના માર્ગદર્શન હેઠળ (એન્ડોસ્કોપિક અને MIS સ્પાઇન ટેકનીક્સ)"
+          year: "",
+          title: "ફેલોશિપ ઇન MIS અને એન્ડોસ્કોપિક સ્પાઇન સર્જરી",
+          inst: "સ્પાઇન 360 હોસ્પિટલ, અમદાવાદ ખાતે ડો. રોહિત ઠાકરના માર્ગદર્શન હેઠળ તાલીમ (એન્ડોસ્કોપિક અને MIS સ્પાઇન ટેકનીક્સ)"
         }
       ],
       coreFocusTitle: "મુખ્ય વિશેષતા: મણકા અને કરોડરજ્જુની આધુનિક સારવાર",
@@ -973,7 +973,7 @@ export const translations = {
       ],
       consultCardTitle: "ઓપીડી સમય અને ક્લિનિકની માહિતી",
       addressLabel: "ક્લિનિકનું સરનામું:",
-      addressVal: "બી ૪૦૧, સનફ્લાવર રેસિડેન્સી, સરખેજ, અમદાવાદ, ગુજરાત",
+      addressVal: "સરખેજ-જુહાપુરા, અમદાવાદ, ગુજરાત",
       phoneLabel: "કોલ / વોટ્સએપ:",
       phoneVal: "+91 85119 54797",
       emailLabel: "ઇમેઇલ:",

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     template: "%s | Dr. Nasir Salar",
   },
   description:
-    "Profile of Dr. Nasir Salar (MBBS, MS Orthopedics, Spine Fellowship), Orthopedic and Spine Surgeon in Sarkhej-Makarba, Ahmedabad, with a clinical focus on MIS Spine Surgery, Endoscopic Spine Surgery, sciatica and slip disc care.",
+    "Profile of Dr. Nasir Salar (MBBS, MS Orthopedics, Spine Fellowship), Orthopedic and Spine Surgeon in Sarkhej-Juhapura, Ahmedabad, with a clinical focus on MIS Spine Surgery, Endoscopic Spine Surgery, sciatica and slip disc care.",
   keywords: [
     "MIS Spine Surgery",
     "MIS Spine Surgery Ahmedabad",

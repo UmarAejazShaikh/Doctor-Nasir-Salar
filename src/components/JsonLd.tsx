@@ -14,8 +14,7 @@ export default function JsonLd() {
     email: "mohammadnasirsalar7866@gmail.com",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "B 401, Sunflower Residency",
-      addressLocality: "Sarkhej, Ahmedabad",
+      addressLocality: "Sarkhej-Juhapura, Ahmedabad",
       addressRegion: "Gujarat",
       postalCode: "382210",
       addressCountry: "IN",

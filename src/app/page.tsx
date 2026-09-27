@@ -145,10 +145,10 @@ export default function HomePage() {
 
                 <div className="space-y-1 pt-2 border-t border-slate-700">
                   <span className="text-slate-400 font-medium block">
-                    {isGu ? "ક્લિનિક સરનામું (સરખેજ):" : "Clinic Address (Sarkhej):"}
+                    {isGu ? "ક્લિનિક સરનામું (સરખેજ-જુહાપુરા):" : "Clinic Address (Sarkhej-Juhapura):"}
                   </span>
                   <p className="text-slate-200 font-medium">
-                    B 401, Sunflower Residency, Sarkhej, Ahmedabad
+                    Sarkhej-Juhapura, Ahmedabad
                   </p>
                 </div>
               </div>
@@ -258,9 +258,11 @@ export default function HomePage() {
                 <div key={idx} className="relative flex items-start gap-4 pl-8">
                   <div className="absolute left-2 top-1.5 w-3.5 h-3.5 rounded-full bg-blue-600 border-4 border-white shadow-sm" />
                   <div className="space-y-0.5">
-                    <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">
-                      {item.year}
-                    </span>
+                    {item.year && (
+                      <span className="text-xs font-bold text-blue-700 bg-blue-50 px-2 py-0.5 rounded">
+                        {item.year}
+                      </span>
+                    )}
                     <h4 className="text-sm font-bold text-slate-900 pt-1">
                       {item.title}
                     </h4>

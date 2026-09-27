@@ -42,12 +42,12 @@ export default function Footer() {
               <span>{isGu ? "ડો. નાસિર સાલાર" : "Dr. Nasir Salar"}</span>
             </div>
             <p className="text-xs text-sky-300 font-semibold">
-              M.B.B.S, M.S. Orthopedic | Fellowship in Spine Surgery
+              M.B.B.S, M.S. Orthopedic | Fellowship Trained MIS & Endoscopic Spine Surgeon
             </p>
             <p className="text-xs text-slate-400 leading-relaxed">
               {isGu
-                ? "બી.જે. મેડિકલ કોલેજ & સિવિલ હોસ્પિટલ (ભૂતપૂર્વ સિનિયર રેસિડેન્ટ) | પ્રખ્યાત સ્પાઇન સર્જન ડો. રોહિત ઠાકર પાસે એન્ડોસ્કોપિક & MIS સ્પાઇન સર્જરી ફેલોશિપ."
-                : "B.J. Medical College & Civil Hospital (Ex-Senior Resident) | Specialized Spine Surgery Fellowship under Dr. Rohit Thaker."}
+                ? "બી.જે. મેડિકલ કોલેજ & સિવિલ હોસ્પિટલ (ભૂતપૂર્વ સિનિયર રેસિડેન્ટ) | પ્રખ્યાત સ્પાઇન સર્જન ડો. રોહિત ઠાકર પાસે સ્પાઇન 360 હોસ્પિટલ, અમદાવાદ ખાતે એન્ડોસ્કોપિક & MIS સ્પાઇન સર્જરી ફેલોશિપ."
+                : "B.J. Medical College & Civil Hospital (Ex-Senior Resident) | MIS & Endoscopic Spine Surgery Fellowship under Dr. Rohit Thaker at Spine 360 Hospital, Ahmedabad."}
             </p>
             <div className="pt-1">
               <a
@@ -102,7 +102,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-slate-400">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
-                <span>B 401, Sunflower Residency, Sarkhej, Ahmedabad, Gujarat</span>
+                <span>Sarkhej-Juhapura, Ahmedabad, Gujarat</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
