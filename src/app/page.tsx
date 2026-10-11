@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
+import { uiText } from "@/data/uiHindi";
 import { translations } from "@/data/translations";
 import {
   CheckCircle2,
@@ -20,9 +21,7 @@ export default function HomePage() {
   const t = translations[language];
 
   const whatsappUrl = `https://wa.me/918511954797?text=${encodeURIComponent(
-    isGu
-      ? "નમસ્તે ડો. નાસિર સાલાર, મારે મણકા / ઓર્થોપેડિક સારવાર અને કન્સલ્ટેશન માટે પૂછપરછ કરવી છે."
-      : "Hello Dr. Nasir Salar, I would like to consult regarding spine / orthopedic condition."
+    uiText(language, "નમસ્તે ડો. નાસિર સાલાર, મારે મણકા / ઓર્થોપેડિક સારવાર અને કન્સલ્ટેશન માટે પૂછપરછ કરવી છે.", "Hello Dr. Nasir Salar, I would like to consult regarding spine / orthopedic condition.")
   )}`;
 
   return (
@@ -58,19 +57,19 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-2 pt-1">
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                  {isGu ? "એન્ડોસ્કોપિક સ્પાઇન સર્જરી" : "Endoscopic Spine Surgery"}
+                  {isGu ? "એન્ડોસ્કોપિક સ્પાઇન સર્જરી" : language === "hi" ? "एंडोस्कोपिक स्पाइन सर्जरी" : "Endoscopic Spine Surgery"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                  {isGu ? "MIS સ્પાઇન સર્જરી" : "MIS Spine Surgery"}
+                  {isGu ? "MIS સ્પાઇન સર્જરી" : language === "hi" ? "न्यूनतम चीरे वाली स्पाइन सर्जरी" : "MIS Spine Surgery"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                  {isGu ? "સાંધા બદલવાનું ઓપરેશન" : "Joint Replacement (TKR/THR)"}
+                  {isGu ? "સાંધા બદલવાનું ઓપરેશન" : language === "hi" ? "घुटने और कूल्हे का प्रत्यारोपण" : "Joint Replacement (TKR/THR)"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                  {isGu ? "ટ્રોમા & ફ્રેક્ચર કેર" : "Trauma & Fracture Fixation"}
+                  {isGu ? "ટ્રોમા & ફ્રેક્ચર કેર" : language === "hi" ? "चोट और फ्रैक्चर का उपचार" : "Trauma & Fracture Fixation"}
                 </span>
               </div>
 
@@ -83,7 +82,7 @@ export default function HomePage() {
                   className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-md transition-all flex items-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>{isGu ? "વોટ્સએપ પર કન્સલ્ટેશન પૂછપરછ" : "WhatsApp Inquiry"}</span>
+                  <span>{isGu ? "વોટ્સએપ પર કન્સલ્ટેશન પૂછપરછ" : language === "hi" ? "व्हाट्सऐप पर परामर्श पूछें" : "WhatsApp Inquiry"}</span>
                 </a>
                 <a
                   href="tel:8511954797"
@@ -120,7 +119,7 @@ export default function HomePage() {
                 <div className="relative w-full h-56 rounded-xl overflow-hidden bg-slate-900">
                   <Image
                     src="/images/dr-nasir-salar.jpg"
-                    alt={isGu ? "ડો. નાસિર સાલાર, ઓર્થોપેડિક અને સ્પાઇન સર્જન" : "Dr. Nasir Salar, Orthopedic & Spine Surgeon"}
+                    alt={uiText(language, "ડો. નાસિર સાલાર, ઓર્થોપેડિક અને સ્પાઇન સર્જન", "Dr. Nasir Salar, Orthopedic & Spine Surgeon")}
                     fill
                     sizes="(max-width: 1024px) 100vw, 320px"
                     className="object-cover object-top"
@@ -128,27 +127,27 @@ export default function HomePage() {
                   />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-base">Dr. Nasir Salar</h3>
-                  <p className="text-xs text-sky-300">M.S. Orthopedic</p>
+                  <h3 className="font-bold text-white text-base">{t.ortho.name}</h3>
+                  <p className="text-xs text-sky-300">{language === "hi" ? "एम.एस. ऑर्थोपेडिक्स" : "M.S. Orthopedic"}</p>
                 </div>
               </div>
 
               <div className="space-y-3 text-xs text-slate-300">
                 <div className="space-y-1">
                   <span className="text-slate-400 font-medium block">
-                    {isGu ? "મુખ્ય વિશેષતા:" : "Clinical Focus:"}
+                    {uiText(language, "મુખ્ય વિશેષતા:", "Clinical Focus:")}
                   </span>
                   <span className="text-white font-bold text-sm block text-sky-200">
-                    Spine, MIS & Endoscopic Surgery
+                    {language === "hi" ? "स्पाइन, MIS और एंडोस्कोपिक सर्जरी" : "Spine, MIS & Endoscopic Surgery"}
                   </span>
                 </div>
 
                 <div className="space-y-1 pt-2 border-t border-slate-700">
                   <span className="text-slate-400 font-medium block">
-                    {isGu ? "ક્લિનિક સરનામું (સરખેજ-જુહાપુરા):" : "Clinic Address (Sarkhej-Juhapura):"}
+                    {uiText(language, "ક્લિનિક સરનામું (સરખેજ-જુહાપુરા):", "Clinic Address (Sarkhej-Juhapura):")}
                   </span>
                   <p className="text-slate-200 font-medium">
-                    Sarkhej-Juhapura, Ahmedabad
+                    {language === "hi" ? "सरखेज-जुहापुरा, अहमदाबाद" : "Sarkhej-Juhapura, Ahmedabad"}
                   </p>
                 </div>
               </div>
@@ -162,7 +161,7 @@ export default function HomePage() {
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-bold border border-blue-200">
             <Zap className="w-3.5 h-3.5 text-blue-600" />
-            <span>{isGu ? "મુખ્ય સુપર-સ્પેશિયાલિટી" : "Primary Super-Specialty Focus"}</span>
+            <span>{uiText(language, "મુખ્ય સુપર-સ્પેશિયાલિટી", "Primary Super-Specialty Focus")}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             {t.ortho.coreFocusTitle}
@@ -211,17 +210,13 @@ export default function HomePage() {
         <div className="rounded-3xl bg-blue-50/70 border border-blue-200 p-6 sm:p-8">
           <div className="max-w-3xl space-y-3">
             <span className="text-xs font-bold text-blue-800 uppercase tracking-wider bg-blue-100 px-3 py-1 rounded-full">
-              {isGu ? "તબીબી સિદ્ધાંત" : "Clinical Philosophy"}
+              {uiText(language, "તબીબી સિદ્ધાંત", "Clinical Philosophy")}
             </span>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-              {isGu
-                ? "ઓપરેશન હંમેશા છેલ્લો વિકલ્પ છે (Conservative Care First)"
-                : "Surgery is Always the Last Resort — Conservative Protocols First"}
+              {uiText(language, "ઓપરેશન હંમેશા છેલ્લો વિકલ્પ છે (Conservative Care First)", "Surgery is Always the Last Resort — Conservative Protocols First")}
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-              {isGu
-                ? "ડો. નાસિર સાલાર માને છે કે મોટાભાગના મણકા અને સાંધાના દર્દીઓ યોગ્ય દવા, લક્ષિત કસરત, ફિઝિયોથેરાપી અને મુદ્રા (પોસ્ચર) સુધારવાથી સાજા થઈ શકે છે. જ્યારે આ તમામ ઉપચારો છતાં અસહ્ય દર્દ રહે કે નસ જોખમમાં હોય ત્યારે જ આધુનિક એન્ડોસ્કોપિક અથવા મિનિમલી ઇન્વેસિવ સર્જરી કરવામાં આવે છે."
-                : "Dr. Nasir Salar prioritizes evidence-based non-surgical protocols: targeted physiotherapy, core stabilization, ergonomic posture correction, and medication. Endoscopic or minimally invasive surgery is recommended only when conservative care fails or progressive nerve deficit threatens mobility."}
+              {uiText(language, "ડો. નાસિર સાલાર માને છે કે મોટાભાગના મણકા અને સાંધાના દર્દીઓ યોગ્ય દવા, લક્ષિત કસરત, ફિઝિયોથેરાપી અને મુદ્રા (પોસ્ચર) સુધારવાથી સાજા થઈ શકે છે. જ્યારે આ તમામ ઉપચારો છતાં અસહ્ય દર્દ રહે કે નસ જોખમમાં હોય ત્યારે જ આધુનિક એન્ડોસ્કોપિક અથવા મિનિમલી ઇન્વેસિવ સર્જરી કરવામાં આવે છે.", "Dr. Nasir Salar prioritizes evidence-based non-surgical protocols: targeted physiotherapy, core stabilization, ergonomic posture correction, and medication. Endoscopic or minimally invasive surgery is recommended only when conservative care fails or progressive nerve deficit threatens mobility.")}
             </p>
           </div>
         </div>
@@ -233,7 +228,7 @@ export default function HomePage() {
           {/* About Doctor Bio */}
           <div className="lg:col-span-5 space-y-4">
             <span className="text-xs font-bold text-blue-700 uppercase tracking-wider">
-              {isGu ? "ડોક્ટરનો પરિચય" : "Professional Bio"}
+              {uiText(language, "ડોક્ટરનો પરિચય", "Professional Bio")}
             </span>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
               {t.ortho.aboutTitle}
@@ -282,7 +277,7 @@ export default function HomePage() {
         <div className="rounded-3xl bg-red-50/60 border border-red-200 p-6 sm:p-8">
           <div className="max-w-3xl space-y-2 mb-6">
             <span className="text-xs font-bold text-red-700 uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">
-              {isGu ? "લક્ષણ માર્ગદર્શિકા" : "Symptom Navigator"}
+              {uiText(language, "લક્ષણ માર્ગદર્શિકા", "Symptom Navigator")}
             </span>
             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
               {t.ortho.symptomsTitle}
@@ -308,16 +303,14 @@ export default function HomePage() {
 
           <div className="mt-6 pt-5 border-t border-red-200/70 flex flex-wrap items-center justify-between gap-4">
             <p className="text-xs text-slate-500">
-              {isGu
-                ? "જો આ લક્ષણો ૨ અઠવાડિયાથી વધુ સમયથી હોય તો યોગ્ય તબીબી સલાહ લેવી જરૂરી છે."
-                : "Persistent nerve pain or progressive weakness should be clinically evaluated to prevent long-term deficit."}
+              {uiText(language, "જો આ લક્ષણો ૨ અઠવાડિયાથી વધુ સમયથી હોય તો યોગ્ય તબીબી સલાહ લેવી જરૂરી છે.", "Persistent nerve pain or progressive weakness should be clinically evaluated to prevent long-term deficit.")}
             </p>
             <a
               href="tel:8511954797"
               className="px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-white font-bold text-xs sm:text-sm transition-colors flex items-center gap-1.5"
             >
               <Phone className="w-4 h-4" />
-              <span>{isGu ? "ડોક્ટરને કૉલ કરો" : "Call for Consultation"}</span>
+              <span>{uiText(language, "ડોક્ટરને કૉલ કરો", "Call for Consultation")}</span>
             </a>
           </div>
         </div>
@@ -329,7 +322,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
             <div className="space-y-4">
               <span className="text-xs font-bold text-sky-400 uppercase tracking-wider">
-                {isGu ? "ક્લિનિક સંપર્ક વિગત" : "Clinic Details & Timings"}
+                {uiText(language, "ક્લિનિક સંપર્ક વિગત", "Clinic Details & Timings")}
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
                 {t.ortho.consultCardTitle}
@@ -364,12 +357,10 @@ export default function HomePage() {
 
             <div className="bg-slate-800 p-6 rounded-2xl border border-slate-700 space-y-3">
               <h3 className="font-bold text-white text-base">
-                {isGu ? "સીધો સંપર્ક કરો" : "Direct WhatsApp Consultation"}
+                {uiText(language, "સીધો સંપર્ક કરો", "Direct WhatsApp Consultation")}
               </h3>
               <p className="text-xs text-slate-300 leading-relaxed">
-                {isGu
-                  ? "તમારી એમઆરઆઈ (MRI) અથવા એક્સ-રે રિપોર્ટ સાથે વોટ્સએપ પર મેસેજ મોકલીને સીધો અભિપ્રાય મેળવો."
-                  : "Send your MRI / X-ray reports directly on WhatsApp for preliminary clinical review and appointment schedule."}
+                {uiText(language, "તમારી એમઆરઆઈ (MRI) અથવા એક્સ-રે રિપોર્ટ સાથે વોટ્સએપ પર મેસેજ મોકલીને સીધો અભિપ્રાય મેળવો.", "Send your MRI / X-ray reports directly on WhatsApp for preliminary clinical review and appointment schedule.")}
               </p>
               <div className="pt-2 flex flex-col sm:flex-row gap-3">
                 <a
@@ -379,7 +370,7 @@ export default function HomePage() {
                   className="flex-1 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm rounded-xl flex items-center justify-center gap-2 transition-colors shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>{isGu ? "વોટ્સએપ પર મેસેજ મોકલો" : "Message on WhatsApp"}</span>
+                  <span>{uiText(language, "વોટ્સએપ પર મેસેજ મોકલો", "Message on WhatsApp")}</span>
                 </a>
                 <a
                   href="tel:8511954797"

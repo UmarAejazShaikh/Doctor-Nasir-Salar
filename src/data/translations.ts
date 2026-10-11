@@ -1,4 +1,6 @@
-export const translations = {
+import { hindiEducation, hindiProcedures, hindiSymptoms } from "./hindiDoctor";
+
+const languageContent = {
   en: {
     meta: {
       siteTitle: "Ahmedabad Medical Directory | Spine Surgeon & Diagnostic Lab",
@@ -1595,4 +1597,106 @@ export const translations = {
       copyright: "તમામ હકો અનામત છે. સરખેજ, મકરબા, અમદાવાદ."
     }
   }
+};
+
+// Hindi starts from the English catalog so every page and test remains available
+// while Hindi labels are added. Keep this entry structurally complete for all routes.
+export const translations = {
+  ...languageContent,
+  hi: {
+    ...languageContent.en,
+    nav: {
+      ...languageContent.en.nav,
+      brandHub: "स्वास्थ्य केंद्र",
+      brandCity: "सरखेज · मकरबा, अहमदाबाद",
+      home: "होम",
+      drNasir: "डॉ. नासिर सालार (स्पाइन और ऑर्थोपेडिक्स)",
+      unityLab: "यूनिटी पैथोलॉजी लैब",
+      services: "विशेषज्ञताएँ",
+      tests: "लैब जाँच सूची",
+      contact: "संपर्क और समय",
+      bookConsultation: "परामर्श के लिए पूछें",
+      bookHomeSample: "घर से नमूना लेने के लिए पूछें",
+      backToDirectory: "चिकित्सा निर्देशिका",
+      backToLabProfile: "लैब प्रोफ़ाइल पर वापस जाएँ",
+      labOverview: "परिचय",
+      labTestsCatalog: "जाँच सूची और कीमतें",
+      labHomeCollection: "घर से नमूना संग्रह",
+      labContact: "पता और समय",
+      orthoOverview: "परिचय",
+      orthoSpine: "स्पाइन सर्जरी",
+      orthoTrauma: "चोट और जोड़",
+      orthoCredentials: "योग्यता",
+      orthoFaqs: "आम सवाल",
+      orthoContact: "क्लिनिक और संपर्क",
+      findDoctors: "विशेषज्ञ खोजें",
+      specialistsOpd: "विशेषज्ञ और ओपीडी",
+      diagnosticsLabs: "जाँच और लैब",
+      testPriceCatalog: "जाँच और कीमतें",
+      langSwitch: "English"
+    },
+    banner: {
+      ...languageContent.en.banner,
+      emergencyCall: "आपातकाल और परामर्श के लिए सीधे कॉल करें:",
+      openHours: "ओपीडी और लैब सोम–शनि: सुबह 8–रात 9 बजे | रवि: सुबह 8–दोपहर 2 बजे",
+      locationBadge: "सरखेज, मकरबा, जुहापुरा, प्रहलाद नगर और साउथ बोपल में सेवा"
+    },
+    ortho: {
+      ...languageContent.en.ortho,
+      badge: "स्पाइन और हड्डी रोग विशेषज्ञ",
+      name: "डॉ. नासिर सालार",
+      degrees: "एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स (बी.जे. मेडिकल कॉलेज और सिविल अस्पताल, अहमदाबाद)",
+      fellowshipText: "डॉ. रोहित ठाकर के मार्गदर्शन में स्पाइन सर्जरी फेलोशिप",
+      tagline: "दर्द-मुक्त गति के लिए उन्नत स्पाइन सर्जरी, न्यूनतम चीरे वाली तकनीक और एंडोस्कोपिक उपचार।",
+      aboutTitle: "डॉ. नासिर सालार के बारे में",
+      aboutP1: "डॉ. नासिर सालार हड्डी रोग विशेषज्ञ हैं, जिन्होंने स्पाइन सर्जरी में विशेष फेलोशिप प्रशिक्षण लिया है। उन्होंने बी.जे. मेडिकल कॉलेज और सिविल अस्पताल, अहमदाबाद से एम.बी.बी.एस. और एम.एस. ऑर्थोपेडिक्स किया है। उन्हें हड्डियों और मांसपेशियों के रोगों, गंभीर चोटों तथा रीढ़ की उम्र से जुड़ी समस्याओं का व्यावहारिक अनुभव है।",
+      aboutP2: "सिविल अस्पताल, अहमदाबाद और जीएमईआरएस मेडिकल कॉलेज में सीनियर रेज़िडेंसी के बाद डॉ. सालार ने स्पाइन सर्जन डॉ. रोहित ठाकर के मार्गदर्शन में स्पाइन सर्जरी फेलोशिप की। वे एंडोस्कोपिक और न्यूनतम चीरे वाली स्पाइन सर्जरी पर ध्यान देते हैं, ताकि ऊतकों को कम नुकसान हो, ऑपरेशन के बाद दर्द घटे और स्वास्थ्य लाभ जल्दी हो।",
+      credentialsTitle: "शिक्षा और चिकित्सकीय अनुभव",
+      eduItems: languageContent.en.ortho.eduItems.map((item, index) => ({ ...item, ...hindiEducation[index] })),
+      coreFocusTitle: "मुख्य विशेषज्ञता: उन्नत स्पाइन सर्जरी",
+      coreFocusSubtitle: "रीढ़ की समस्याओं के लिए आधुनिक छोटे चीरे और न्यूनतम चीरे वाली उपचार तकनीकें।",
+      spineProcedures: languageContent.en.ortho.spineProcedures.map((procedure, index) => ({ ...procedure, ...hindiProcedures[index] })),
+      symptomsTitle: "डॉ. नासिर सालार से कब परामर्श लें?",
+      symptomsSubtitle: "आप या परिवार के किसी सदस्य में निम्न लक्षण हों तो हड्डी और स्पाइन विशेषज्ञ से समय पर जाँच कराएँ:",
+      symptomsList: hindiSymptoms,
+      consultCardTitle: "परामर्श और क्लिनिक की जानकारी",
+      addressLabel: "क्लिनिक का पता:",
+      phoneLabel: "कॉल / व्हाट्सऐप:",
+      emailLabel: "ईमेल:",
+      bookConsultBtn: "व्हाट्सऐप पर परामर्श बुक करें",
+      callDirectBtn: "डॉ. नासिर को अभी कॉल करें"
+    },
+    pathology: {
+      ...languageContent.en.pathology,
+      badge: "प्रमाणित जाँच सेवाएँ",
+      name: "यूनिटी पैथोलॉजी लैबोरेटरी",
+      ratingTitle: "5.0 ★★★★★ Google रेटिंग (60 मरीजों की समीक्षाएँ)",
+      headline: "सरखेज-मकरबा में सटीक जाँच और घर से नमूना संग्रह।",
+      subheadline: "स्वचालित विश्लेषक और विशेषज्ञ रिपोर्टिंग के साथ विश्वसनीय जाँच। रिपोर्ट उसी दिन WhatsApp या ईमेल पर पाएँ।",
+      homeCollectBanner: "घर पर रक्त जाँच चाहिए? सरखेज, मकरबा और आसपास के क्षेत्रों में नमूना संग्रह उपलब्ध है। सुबह का समय तय करने के लिए कॉल या संदेश करें।",
+      bookHomeBtn: "घर से नमूना लेने के लिए पूछें",
+      callLabBtn: "लैब को कॉल करें (+91 63530 65009)",
+      popularPackagesTitle: "मुख्य जाँच और स्वास्थ्य पैकेज",
+      onlineDiscountBannerTitle: "ऑनलाइन बुकिंग पर विशेष छूट",
+      exploreAllTestsBtn: "सभी 30+ जाँच और पूरी कीमत सूची देखें",
+      searchPlaceholder: "जाँच खोजें (जैसे CBC, थायरॉइड, डेंगू)...",
+      filterAll: "सभी जाँच",
+      filterRoutine: "नियमित जाँच",
+      filterDiabetes: "मधुमेह",
+      filterOrgan: "बायोकेमिस्ट्री और अंगों की जाँच",
+      filterHormonal: "थायरॉइड और हार्मोन",
+      filterInfection: "संक्रमण जाँच",
+      filterSpecial: "विशेष जाँच",
+      filterPackages: "होल बॉडी पैकेज"
+    },
+    hub: {
+      ...languageContent.en.hub,
+      badge: "दक्षिण-पश्चिम अहमदाबाद की स्वास्थ्य निर्देशिका",
+      heroTitle: "विश्वसनीय जाँच के साथ सटीक स्पाइन और हड्डी रोग उपचार।",
+      heroSubtitle: "अहमदाबाद के सरखेज और मकरबा में संपूर्ण उपचार के लिए समर्पित। स्पाइन विशेषज्ञ डॉ. नासिर सालार से परामर्श लें या 5-स्टार यूनिटी पैथोलॉजी लैब से संपर्क करें।",
+      ctaConsultDoctor: "डॉ. नासिर सालार से परामर्श लें",
+      ctaBookLabTest: "यूनिटी पैथोलॉजी लैब",
+      callUs: "कॉल करें"
+    }
+  },
 };

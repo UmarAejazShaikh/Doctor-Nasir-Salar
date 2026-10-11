@@ -3,17 +3,16 @@
 import React from "react";
 import { MessageCircle } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { uiText } from "@/data/uiHindi";
 
 export default function FloatingActions() {
-  const { isGu } = useLanguage();
+  const { language } = useLanguage();
 
   const whatsappUrl = `https://wa.me/918511954797?text=${encodeURIComponent(
-    isGu
-      ? "નમસ્તે ડો. નાસિર સાલાર, મારે મણકા / ઓર્થોપેડિક કન્સલ્ટેશન માટે સંપર્ક કરવો છે."
-      : "Hello Dr. Nasir Salar, I would like to consult regarding spine / orthopedic issues."
+    uiText(language, "નમસ્તે ડો. નાસિર સાલાર, મારે મણકા / ઓર્થોપેડિક કન્સલ્ટેશન માટે સંપર્ક કરવો છે.", "Hello Dr. Nasir Salar, I would like to consult regarding spine / orthopedic issues.")
   )}`;
 
-  const label = isGu ? "ડોક્ટર સાથે વોટ્સએપ" : "WhatsApp Dr. Nasir";
+  const label = uiText(language, "ડોક્ટર સાથે વોટ્સએપ", "WhatsApp Dr. Nasir");
 
   return (
     <aside aria-label={label} className="fixed bottom-5 right-5 z-40">

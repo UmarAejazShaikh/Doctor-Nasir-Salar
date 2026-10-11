@@ -2,6 +2,7 @@
 
 import React from "react";
 import { useLanguage } from "@/context/LanguageContext";
+import { uiText } from "@/data/uiHindi";
 import {
   Phone,
   Mail,
@@ -14,7 +15,7 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
-  const { isGu } = useLanguage();
+  const { language } = useLanguage();
 
   const InstagramIcon = () => (
     <svg
@@ -39,15 +40,13 @@ export default function Footer() {
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider pb-1 border-b border-slate-800">
               <Stethoscope className="w-4 h-4 text-sky-400" />
-              <span>{isGu ? "ડો. નાસિર સાલાર" : "Dr. Nasir Salar"}</span>
+              <span>{uiText(language, "ડો. નાસિર સાલાર", "Dr. Nasir Salar")}</span>
             </div>
             <p className="text-xs text-sky-300 font-semibold">
-              M.B.B.S, M.S. Orthopedic | Fellowship Trained MIS & Endoscopic Spine Surgeon
+              {language === "hi" ? "एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स | MIS और एंडोस्कोपिक स्पाइन सर्जरी में फेलोशिप" : "M.B.B.S, M.S. Orthopedic | Fellowship Trained MIS & Endoscopic Spine Surgeon"}
             </p>
             <p className="text-xs text-slate-400 leading-relaxed">
-              {isGu
-                ? "બી.જે. મેડિકલ કોલેજ & સિવિલ હોસ્પિટલ (ભૂતપૂર્વ સિનિયર રેસિડેન્ટ) | પ્રખ્યાત સ્પાઇન સર્જન ડો. રોહિત ઠાકર પાસે સ્પાઇન 360 હોસ્પિટલ, અમદાવાદ ખાતે એન્ડોસ્કોપિક & MIS સ્પાઇન સર્જરી ફેલોશિપ."
-                : "B.J. Medical College & Civil Hospital (Ex-Senior Resident) | MIS & Endoscopic Spine Surgery Fellowship under Dr. Rohit Thaker at Spine 360 Hospital, Ahmedabad."}
+              {uiText(language, "બી.જે. મેડિકલ કોલેજ & સિવિલ હોસ્પિટલ (ભૂતપૂર્વ સિનિયર રેસિડેન્ટ) | પ્રખ્યાત સ્પાઇન સર્જન ડો. રોહિત ઠાકર પાસે સ્પાઇન 360 હોસ્પિટલ, અમદાવાદ ખાતે એન્ડોસ્કોપિક & MIS સ્પાઇન સર્જરી ફેલોશિપ.", "B.J. Medical College & Civil Hospital (Ex-Senior Resident) | MIS & Endoscopic Spine Surgery Fellowship under Dr. Rohit Thaker at Spine 360 Hospital, Ahmedabad.")}
             </p>
             <div className="pt-1">
               <a
@@ -65,44 +64,44 @@ export default function Footer() {
 
           <div className="space-y-3">
             <h4 className="text-white font-bold text-sm uppercase tracking-wider pb-1 border-b border-slate-800">
-              {isGu ? "મુખ્ય સારવાર વિભાગ" : "Primary Clinical Focus"}
+              {uiText(language, "મુખ્ય સારવાર વિભાગ", "Primary Clinical Focus")}
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{isGu ? "દૂરબીનથી ટાંકા વગર મણકાનું ઓપરેશન" : "Endoscopic Spine Surgery (Keyhole, <8mm)"}</span>
+                <span>{uiText(language, "દૂરબીનથી ટાંકા વગર મણકાનું ઓપરેશન", "Endoscopic Spine Surgery (Keyhole, <8mm)")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{isGu ? "મિનિમલી ઇન્વેસિવ સ્પાઇન સર્જરી (MIS-TLIF)" : "Minimally Invasive Spine Surgery (MIS-TLIF)"}</span>
+                <span>{uiText(language, "મિનિમલી ઇન્વેસિવ સ્પાઇન સર્જરી (MIS-TLIF)", "Minimally Invasive Spine Surgery (MIS-TLIF)")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{isGu ? "સાયટીકા & સ્લિપ ડિસ્ક સારવાર" : "Sciatica & Lumbar Disc Herniation"}</span>
+                <span>{uiText(language, "સાયટીકા & સ્લિપ ડિસ્ક સારવાર", "Sciatica & Lumbar Disc Herniation")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{isGu ? "સાંધા બદલવાનું ઓપરેશન (TKR / THR)" : "Total Knee & Hip Replacement (Arthroplasty)"}</span>
+                <span>{uiText(language, "સાંધા બદલવાનું ઓપરેશન (TKR / THR)", "Total Knee & Hip Replacement (Arthroplasty)")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{isGu ? "હાડકાના ફ્રેક્ચર અને ટ્રોમા કેર" : "Complex Fracture Fixation & Trauma Care"}</span>
+                <span>{uiText(language, "હાડકાના ફ્રેક્ચર અને ટ્રોમા કેર", "Complex Fracture Fixation & Trauma Care")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{isGu ? "સી-આર્મ ગાઇડેડ સ્પાઇન ઇન્જેક્શન" : "C-Arm Image-Guided Spine Injections"}</span>
+                <span>{uiText(language, "સી-આર્મ ગાઇડેડ સ્પાઇન ઇન્જેક્શન", "C-Arm Image-Guided Spine Injections")}</span>
               </li>
             </ul>
           </div>
 
           <div className="space-y-3">
             <h4 className="text-white font-bold text-sm uppercase tracking-wider pb-1 border-b border-slate-800">
-              {isGu ? "ક્લિનિક સંપર્ક અને સમય" : "Clinic & Appointments"}
+              {uiText(language, "ક્લિનિક સંપર્ક અને સમય", "Clinic & Appointments")}
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
-                <span>Sarkhej-Juhapura, Ahmedabad, Gujarat</span>
+                <span>{language === "hi" ? "सरखेज-जुहापुरा, अहमदाबाद, गुजरात" : "Sarkhej-Juhapura, Ahmedabad, Gujarat"}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
@@ -118,7 +117,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-2">
                 <Clock className="w-4 h-4 text-sky-400 flex-shrink-0" />
-                <span>{isGu ? "સોમ–શનિ: એપોઇન્ટમેન્ટ મુજબ કન્સલ્ટેશન" : "Mon–Sat: Consultation by Appointment"}</span>
+                <span>{uiText(language, "સોમ–શનિ: એપોઇન્ટમેન્ટ મુજબ કન્સલ્ટેશન", "Mon–Sat: Consultation by Appointment")}</span>
               </li>
             </ul>
             <div className="pt-2">
@@ -129,7 +128,7 @@ export default function Footer() {
                 className="w-full py-2.5 px-4 bg-blue-700 hover:bg-blue-600 text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-sm"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>{isGu ? "વોટ્સએપ પર એપોઇન્ટમેન્ટ પૂછપરછ" : "Inquire Appointment on WhatsApp"}</span>
+                <span>{uiText(language, "વોટ્સએપ પર એપોઇન્ટમેન્ટ પૂછપરછ", "Inquire Appointment on WhatsApp")}</span>
               </a>
             </div>
           </div>
@@ -137,11 +136,9 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div className="space-y-1 text-center sm:text-left">
-            <p>© {new Date().getFullYear()} Dr. Nasir Salar (Spine & Orthopedic Surgeon). All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} {language === "hi" ? "डॉ. नासिर सालार (स्पाइन और हड्डी रोग विशेषज्ञ)। सर्वाधिकार सुरक्षित।" : "Dr. Nasir Salar (Spine & Orthopedic Surgeon). All Rights Reserved."}</p>
             <p className="text-[11px] text-slate-500">
-              {isGu
-                ? "મેડિકલ ડિસ્ક્લેમર: આ પેજ પર દર્શાવેલ માહિતી દર્દીના શિક્ષણ અને માર્ગદર્શન માટે છે. સચોટ નિદાન માટે સીધો પરામર્શ જરૂરી છે."
-                : "Medical Disclaimer: Clinical procedures, diagnoses, and treatment recommendations require direct medical evaluation. Content here is for patient awareness."}
+              {uiText(language, "મેડિકલ ડિસ્ક્લેમર: આ પેજ પર દર્શાવેલ માહિતી દર્દીના શિક્ષણ અને માર્ગદર્શન માટે છે. સચોટ નિદાન માટે સીધો પરામર્શ જરૂરી છે.", "Medical Disclaimer: Clinical procedures, diagnoses, and treatment recommendations require direct medical evaluation. Content here is for patient awareness.")}
             </p>
           </div>
         </div>
