@@ -21,7 +21,7 @@ export default function HomePage() {
   const t = translations[language];
 
   const whatsappUrl = `https://wa.me/918511954797?text=${encodeURIComponent(
-    uiText(language, "નમસ્તે ડો. નાસિર સાલાર, મારે મણકા / ઓર્થોપેડિક સારવાર અને કન્સલ્ટેશન માટે પૂછપરછ કરવી છે.", "Hello Dr. Nasir Salar, I would like to consult regarding spine / orthopedic condition.")
+    uiText(language, "નમસ્તે ડો. નાસિર સાલાર, મારે કમર અથવા હાડકાંની તકલીફ અંગે સલાહ લેવી છે.", "Hello Dr. Nasir Salar, I would like to consult regarding spine / orthopedic condition.")
   )}`;
 
   return (
@@ -57,15 +57,15 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-2 pt-1">
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                  {isGu ? "એન્ડોસ્કોપિક સ્પાઇન સર્જરી" : language === "hi" ? "एंडोस्कोपिक स्पाइन सर्जरी" : "Endoscopic Spine Surgery"}
+                  {isGu ? "દૂરબીનથી મણકાની સર્જરી" : language === "hi" ? "कैमरे से रीढ़ की सर्जरी" : "Endoscopic Spine Surgery"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                  {isGu ? "MIS સ્પાઇન સર્જરી" : language === "hi" ? "न्यूनतम चीरे वाली स्पाइन सर्जरी" : "MIS Spine Surgery"}
+                  {isGu ? "નાના ચીરાથી મણકાની સર્જરી" : language === "hi" ? "छोटे चीरे से रीढ़ की सर्जरी" : "MIS Spine Surgery"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
-                  {isGu ? "સાંધા બદલવાનું ઓપરેશન" : language === "hi" ? "घुटने और कूल्हे का प्रत्यारोपण" : "Joint Replacement (TKR/THR)"}
+                  {isGu ? "સાંધા બદલવાની સર્જરી" : language === "hi" ? "घुटना या कूल्हा बदलने की सर्जरी" : "Joint Replacement (TKR/THR)"}
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700 text-slate-200 text-xs font-medium flex items-center gap-1.5">
                   <CheckCircle2 className="w-3.5 h-3.5 text-sky-400" />
@@ -82,7 +82,7 @@ export default function HomePage() {
                   className="px-6 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-sm sm:text-base shadow-md transition-all flex items-center gap-2"
                 >
                   <MessageCircle className="w-4 h-4" />
-                  <span>{isGu ? "વોટ્સએપ પર કન્સલ્ટેશન પૂછપરછ" : language === "hi" ? "व्हाट्सऐप पर परामर्श पूछें" : "WhatsApp Inquiry"}</span>
+                  <span>{isGu ? "વોટ્સએપ પર સારવાર વિશે પૂછો" : language === "hi" ? "व्हाट्सऐप पर परामर्श पूछें" : "WhatsApp Inquiry"}</span>
                 </a>
                 <a
                   href="tel:8511954797"
@@ -128,7 +128,7 @@ export default function HomePage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-base">{t.ortho.name}</h3>
-                  <p className="text-xs text-sky-300">{language === "hi" ? "एम.एस. ऑर्थोपेडिक्स" : "M.S. Orthopedic"}</p>
+                  <p className="text-xs text-sky-300">{language === "gu" ? "એમ.એસ. ઓર્થોપેડિક્સ" : language === "hi" ? "एम.एस. ऑर्थोपेडिक्स" : "M.S. Orthopedic"}</p>
                 </div>
               </div>
 
@@ -138,7 +138,7 @@ export default function HomePage() {
                     {uiText(language, "મુખ્ય વિશેષતા:", "Clinical Focus:")}
                   </span>
                   <span className="text-white font-bold text-sm block text-sky-200">
-                    {language === "hi" ? "स्पाइन, MIS और एंडोस्कोपिक सर्जरी" : "Spine, MIS & Endoscopic Surgery"}
+                    {language === "gu" ? "મણકા, નાના ચીરા અને દૂરબીનથી સર્જરી" : language === "hi" ? "रीढ़, छोटे चीरे और कैमरे से सर्जरी" : "Spine, MIS & Endoscopic Surgery"}
                   </span>
                 </div>
 
@@ -147,7 +147,7 @@ export default function HomePage() {
                     {uiText(language, "ક્લિનિક સરનામું (સરખેજ-જુહાપુરા):", "Clinic Address (Sarkhej-Juhapura):")}
                   </span>
                   <p className="text-slate-200 font-medium">
-                    {language === "hi" ? "सरखेज-जुहापुरा, अहमदाबाद" : "Sarkhej-Juhapura, Ahmedabad"}
+                    {language === "gu" ? "સરખેજ-જુહાપુરા, અમદાવાદ" : language === "hi" ? "सरखेज-जुहापुरा, अहमदाबाद" : "Sarkhej-Juhapura, Ahmedabad"}
                   </p>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export default function HomePage() {
         <div className="text-center max-w-3xl mx-auto mb-10 space-y-2">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-800 text-xs font-bold border border-blue-200">
             <Zap className="w-3.5 h-3.5 text-blue-600" />
-            <span>{uiText(language, "મુખ્ય સુપર-સ્પેશિયાલિટી", "Primary Super-Specialty Focus")}</span>
+            <span>{uiText(language, "મુખ્ય સારવાર", "Primary Super-Specialty Focus")}</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900">
             {t.ortho.coreFocusTitle}
@@ -210,13 +210,13 @@ export default function HomePage() {
         <div className="rounded-3xl bg-blue-50/70 border border-blue-200 p-6 sm:p-8">
           <div className="max-w-3xl space-y-3">
             <span className="text-xs font-bold text-blue-800 uppercase tracking-wider bg-blue-100 px-3 py-1 rounded-full">
-              {uiText(language, "તબીબી સિદ્ધાંત", "Clinical Philosophy")}
+              {uiText(language, "સારવારની રીત", "Clinical Philosophy")}
             </span>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900">
-              {uiText(language, "ઓપરેશન હંમેશા છેલ્લો વિકલ્પ છે (Conservative Care First)", "Surgery is Always the Last Resort — Conservative Protocols First")}
+              {uiText(language, "પહેલા દવા અને કસરત, જરૂર હોય ત્યારે ઓપરેશન", "Surgery is Always the Last Resort — Conservative Protocols First")}
             </h3>
             <p className="text-xs sm:text-sm text-slate-700 leading-relaxed">
-              {uiText(language, "ડો. નાસિર સાલાર માને છે કે મોટાભાગના મણકા અને સાંધાના દર્દીઓ યોગ્ય દવા, લક્ષિત કસરત, ફિઝિયોથેરાપી અને મુદ્રા (પોસ્ચર) સુધારવાથી સાજા થઈ શકે છે. જ્યારે આ તમામ ઉપચારો છતાં અસહ્ય દર્દ રહે કે નસ જોખમમાં હોય ત્યારે જ આધુનિક એન્ડોસ્કોપિક અથવા મિનિમલી ઇન્વેસિવ સર્જરી કરવામાં આવે છે.", "Dr. Nasir Salar prioritizes evidence-based non-surgical protocols: targeted physiotherapy, core stabilization, ergonomic posture correction, and medication. Endoscopic or minimally invasive surgery is recommended only when conservative care fails or progressive nerve deficit threatens mobility.")}
+              {uiText(language, "ડો. નાસિર સાલાર પહેલા દવા, કસરત, ફિઝિયોથેરાપી અને બેસવા-ઊભા રહેવાની રીત સુધારવાની સલાહ આપે છે. આથી ફાયદો ન થાય કે નસ નબળી પડતી જાય તો જ ઓપરેશન વિશે વિચારવામાં આવે છે.", "Dr. Nasir Salar prioritizes evidence-based non-surgical protocols: targeted physiotherapy, core stabilization, ergonomic posture correction, and medication. Endoscopic or minimally invasive surgery is recommended only when conservative care fails or progressive nerve deficit threatens mobility.")}
             </p>
           </div>
         </div>
@@ -277,7 +277,7 @@ export default function HomePage() {
         <div className="rounded-3xl bg-red-50/60 border border-red-200 p-6 sm:p-8">
           <div className="max-w-3xl space-y-2 mb-6">
             <span className="text-xs font-bold text-red-700 uppercase tracking-wider bg-red-100 px-3 py-1 rounded-full">
-              {uiText(language, "લક્ષણ માર્ગદર્શિકા", "Symptom Navigator")}
+              {uiText(language, "ક્યારે તપાસ કરાવવી", "Symptom Navigator")}
             </span>
             <h2 className="text-xl sm:text-2xl font-extrabold text-slate-900">
               {t.ortho.symptomsTitle}
@@ -349,7 +349,7 @@ export default function HomePage() {
                 <div className="flex items-center gap-3">
                   <Clock className="w-5 h-5 text-sky-400 flex-shrink-0" />
                   <div>
-                    <strong className="text-white">{t.banner.openHours}</strong>
+                    <strong className="text-white">{language === "gu" ? "સોમ–શનિ: મુલાકાતનો સમય ફોન પર નક્કી કરો" : language === "hi" ? "सोम–शनि: मिलने का समय तय करने के लिए कॉल करें" : "Mon–Sat: Consultation by Appointment"}</strong>
                   </div>
                 </div>
               </div>

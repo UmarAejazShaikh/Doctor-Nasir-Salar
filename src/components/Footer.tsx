@@ -43,7 +43,7 @@ export default function Footer() {
               <span>{uiText(language, "ડો. નાસિર સાલાર", "Dr. Nasir Salar")}</span>
             </div>
             <p className="text-xs text-sky-300 font-semibold">
-              {language === "hi" ? "एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स | MIS और एंडोस्कोपिक स्पाइन सर्जरी में फेलोशिप" : "M.B.B.S, M.S. Orthopedic | Fellowship Trained MIS & Endoscopic Spine Surgeon"}
+              {language === "gu" ? "MBBS, MS ઓર્થોપેડિક્સ | દૂરબીનથી મણકાની સર્જરીની ખાસ તાલીમ" : language === "hi" ? "MBBS, MS हड्डी रोग | कैमरे से रीढ़ की सर्जरी का खास प्रशिक्षण" : "M.B.B.S, M.S. Orthopedic | Fellowship Trained MIS & Endoscopic Spine Surgeon"}
             </p>
             <p className="text-xs text-slate-400 leading-relaxed">
               {uiText(language, "બી.જે. મેડિકલ કોલેજ & સિવિલ હોસ્પિટલ (ભૂતપૂર્વ સિનિયર રેસિડેન્ટ) | પ્રખ્યાત સ્પાઇન સર્જન ડો. રોહિત ઠાકર પાસે સ્પાઇન 360 હોસ્પિટલ, અમદાવાદ ખાતે એન્ડોસ્કોપિક & MIS સ્પાઇન સર્જરી ફેલોશિપ.", "B.J. Medical College & Civil Hospital (Ex-Senior Resident) | MIS & Endoscopic Spine Surgery Fellowship under Dr. Rohit Thaker at Spine 360 Hospital, Ahmedabad.")}
@@ -69,15 +69,15 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-slate-400">
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{uiText(language, "દૂરબીનથી ટાંકા વગર મણકાનું ઓપરેશન", "Endoscopic Spine Surgery (Keyhole, <8mm)")}</span>
+                <span>{uiText(language, "દૂરબીનથી મણકાની સર્જરી", "Endoscopic Spine Surgery (Keyhole, <8mm)")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{uiText(language, "મિનિમલી ઇન્વેસિવ સ્પાઇન સર્જરી (MIS-TLIF)", "Minimally Invasive Spine Surgery (MIS-TLIF)")}</span>
+                <span>{uiText(language, "નાના ચીરાથી મણકાની સર્જરી (MIS)", "Minimally Invasive Spine Surgery (MIS-TLIF)")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{uiText(language, "સાયટીકા & સ્લિપ ડિસ્ક સારવાર", "Sciatica & Lumbar Disc Herniation")}</span>
+                <span>{uiText(language, "કમરથી પગમાં ઉતરતો દુખાવો અને સ્લિપ ડિસ્ક", "Sciatica & Lumbar Disc Herniation")}</span>
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
@@ -89,7 +89,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center gap-1.5">
                 <ChevronRight className="w-3 h-3 text-sky-400" />
-                <span>{uiText(language, "સી-આર્મ ગાઇડેડ સ્પાઇન ઇન્જેક્શન", "C-Arm Image-Guided Spine Injections")}</span>
+                <span>{uiText(language, "એક્સ-રેની મદદથી મણકાનું ઇન્જેક્શન", "C-Arm Image-Guided Spine Injections")}</span>
               </li>
             </ul>
           </div>
@@ -101,7 +101,7 @@ export default function Footer() {
             <ul className="space-y-2 text-xs text-slate-400">
               <li className="flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
-                <span>{language === "hi" ? "सरखेज-जुहापुरा, अहमदाबाद, गुजरात" : "Sarkhej-Juhapura, Ahmedabad, Gujarat"}</span>
+                <span>{language === "gu" ? "સરખેજ-જુહાપુરા, અમદાવાદ, ગુજરાત" : language === "hi" ? "सरखेज-जुहापुरा, अहमदाबाद, गुजरात" : "Sarkhej-Juhapura, Ahmedabad, Gujarat"}</span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4 text-sky-400 flex-shrink-0" />
@@ -128,7 +128,7 @@ export default function Footer() {
                 className="w-full py-2.5 px-4 bg-blue-700 hover:bg-blue-600 text-white rounded-xl text-xs font-bold transition-colors flex items-center justify-center gap-2 shadow-sm"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>{uiText(language, "વોટ્સએપ પર એપોઇન્ટમેન્ટ પૂછપરછ", "Inquire Appointment on WhatsApp")}</span>
+                <span>{uiText(language, "વોટ્સએપ પર મુલાકાતનો સમય પૂછો", "Inquire Appointment on WhatsApp")}</span>
               </a>
             </div>
           </div>
@@ -136,9 +136,9 @@ export default function Footer() {
 
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div className="space-y-1 text-center sm:text-left">
-            <p>© {new Date().getFullYear()} {language === "hi" ? "डॉ. नासिर सालार (स्पाइन और हड्डी रोग विशेषज्ञ)। सर्वाधिकार सुरक्षित।" : "Dr. Nasir Salar (Spine & Orthopedic Surgeon). All Rights Reserved."}</p>
+            <p>© {new Date().getFullYear()} {language === "gu" ? "ડો. નાસિર સાલાર (હાડકાં અને મણકાના સર્જન). બધા હક સુરક્ષિત." : language === "hi" ? "डॉ. नासिर सालार (हड्डी और रीढ़ के सर्जन)। सभी अधिकार सुरक्षित।" : "Dr. Nasir Salar (Spine & Orthopedic Surgeon). All Rights Reserved."}</p>
             <p className="text-[11px] text-slate-500">
-              {uiText(language, "મેડિકલ ડિસ્ક્લેમર: આ પેજ પર દર્શાવેલ માહિતી દર્દીના શિક્ષણ અને માર્ગદર્શન માટે છે. સચોટ નિદાન માટે સીધો પરામર્શ જરૂરી છે.", "Medical Disclaimer: Clinical procedures, diagnoses, and treatment recommendations require direct medical evaluation. Content here is for patient awareness.")}
+              {uiText(language, "આ માહિતી સમજવા માટે છે. તમારી તકલીફનું સાચું કારણ અને સારવાર જાણવા ડોક્ટરને મળો.", "Medical Disclaimer: Clinical procedures, diagnoses, and treatment recommendations require direct medical evaluation. Content here is for patient awareness.")}
             </p>
           </div>
         </div>

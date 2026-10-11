@@ -29,7 +29,7 @@ export default function Navbar() {
                 {isGu ? "ડો. નાસિર સાલાર" : language === "hi" ? "डॉ. नासिर सालार" : "Dr. Nasir Salar"}
               </span>
               <span className="hidden sm:inline text-xs text-slate-500 font-medium">
-                {isGu ? "સ્પાઇન & ઓર્થોપેડિક સર્જન" : language === "hi" ? "स्पाइन और हड्डी रोग विशेषज्ञ" : "Spine & Orthopedic Surgeon"}
+                {isGu ? "હાડકાં અને મણકાના સર્જન" : language === "hi" ? "हड्डी और रीढ़ के सर्जन" : "Spine & Orthopedic Surgeon"}
               </span>
             </div>
           </Link>

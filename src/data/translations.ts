@@ -1,4 +1,5 @@
 import { hindiEducation, hindiProcedures, hindiSymptoms } from "./hindiDoctor";
+import { simpleGujaratiDoctor, simpleGujaratiProcedures, simpleGujaratiSymptoms } from "./simpleGujaratiDoctor";
 
 const languageContent = {
   en: {
@@ -1603,6 +1604,18 @@ const languageContent = {
 // while Hindi labels are added. Keep this entry structurally complete for all routes.
 export const translations = {
   ...languageContent,
+  gu: {
+    ...languageContent.gu,
+    ortho: {
+      ...languageContent.gu.ortho,
+      ...simpleGujaratiDoctor,
+      spineProcedures: languageContent.gu.ortho.spineProcedures.map((procedure, index) => ({
+        ...procedure,
+        ...simpleGujaratiProcedures[index],
+      })),
+      symptomsList: simpleGujaratiSymptoms,
+    },
+  },
   hi: {
     ...languageContent.en,
     nav: {
@@ -1643,23 +1656,23 @@ export const translations = {
     },
     ortho: {
       ...languageContent.en.ortho,
-      badge: "स्पाइन और हड्डी रोग विशेषज्ञ",
+      badge: "हड्डी और रीढ़ के सर्जन",
       name: "डॉ. नासिर सालार",
       degrees: "एम.बी.बी.एस., एम.एस. ऑर्थोपेडिक्स (बी.जे. मेडिकल कॉलेज और सिविल अस्पताल, अहमदाबाद)",
       fellowshipText: "डॉ. रोहित ठाकर के मार्गदर्शन में स्पाइन सर्जरी फेलोशिप",
-      tagline: "दर्द-मुक्त गति के लिए उन्नत स्पाइन सर्जरी, न्यूनतम चीरे वाली तकनीक और एंडोस्कोपिक उपचार।",
+      tagline: "कमर और गर्दन की परेशानी के लिए कैमरे और छोटे चीरे से इलाज।",
       aboutTitle: "डॉ. नासिर सालार के बारे में",
-      aboutP1: "डॉ. नासिर सालार हड्डी रोग विशेषज्ञ हैं, जिन्होंने स्पाइन सर्जरी में विशेष फेलोशिप प्रशिक्षण लिया है। उन्होंने बी.जे. मेडिकल कॉलेज और सिविल अस्पताल, अहमदाबाद से एम.बी.बी.एस. और एम.एस. ऑर्थोपेडिक्स किया है। उन्हें हड्डियों और मांसपेशियों के रोगों, गंभीर चोटों तथा रीढ़ की उम्र से जुड़ी समस्याओं का व्यावहारिक अनुभव है।",
-      aboutP2: "सिविल अस्पताल, अहमदाबाद और जीएमईआरएस मेडिकल कॉलेज में सीनियर रेज़िडेंसी के बाद डॉ. सालार ने स्पाइन सर्जन डॉ. रोहित ठाकर के मार्गदर्शन में स्पाइन सर्जरी फेलोशिप की। वे एंडोस्कोपिक और न्यूनतम चीरे वाली स्पाइन सर्जरी पर ध्यान देते हैं, ताकि ऊतकों को कम नुकसान हो, ऑपरेशन के बाद दर्द घटे और स्वास्थ्य लाभ जल्दी हो।",
-      credentialsTitle: "शिक्षा और चिकित्सकीय अनुभव",
+      aboutP1: "डॉ. नासिर सालार हड्डी और रीढ़ के सर्जन हैं। उन्होंने अहमदाबाद के बी.जे. मेडिकल कॉलेज और सिविल अस्पताल से MBBS और MS ऑर्थोपेडिक्स किया है। उन्हें हड्डी की चोट, जोड़ों की परेशानी और कमर-गर्दन के दर्द के इलाज का अनुभव है।",
+      aboutP2: "सिविल अस्पताल, अहमदाबाद और जीएमईआरएस मेडिकल कॉलेज में काम करने के बाद उन्होंने डॉ. रोहित ठाकर से रीढ़ की सर्जरी का विशेष प्रशिक्षण लिया। ज़रूरत होने पर वे कैमरे या छोटे चीरे से इलाज करते हैं।",
+      credentialsTitle: "पढ़ाई और अनुभव",
       eduItems: languageContent.en.ortho.eduItems.map((item, index) => ({ ...item, ...hindiEducation[index] })),
-      coreFocusTitle: "मुख्य विशेषज्ञता: उन्नत स्पाइन सर्जरी",
-      coreFocusSubtitle: "रीढ़ की समस्याओं के लिए आधुनिक छोटे चीरे और न्यूनतम चीरे वाली उपचार तकनीकें।",
+      coreFocusTitle: "कमर और गर्दन का इलाज",
+      coreFocusSubtitle: "रीढ़ की परेशानी में कैमरे और छोटे चीरे से होने वाले इलाज के बारे में जानें।",
       spineProcedures: languageContent.en.ortho.spineProcedures.map((procedure, index) => ({ ...procedure, ...hindiProcedures[index] })),
-      symptomsTitle: "डॉ. नासिर सालार से कब परामर्श लें?",
-      symptomsSubtitle: "आप या परिवार के किसी सदस्य में निम्न लक्षण हों तो हड्डी और स्पाइन विशेषज्ञ से समय पर जाँच कराएँ:",
+      symptomsTitle: "डॉक्टर को कब दिखाएँ?",
+      symptomsSubtitle: "आप या घर में किसी को इनमें से कोई परेशानी हो तो जाँच के लिए संपर्क करें:",
       symptomsList: hindiSymptoms,
-      consultCardTitle: "परामर्श और क्लिनिक की जानकारी",
+      consultCardTitle: "क्लिनिक का समय और संपर्क",
       addressLabel: "क्लिनिक का पता:",
       phoneLabel: "कॉल / व्हाट्सऐप:",
       emailLabel: "ईमेल:",
